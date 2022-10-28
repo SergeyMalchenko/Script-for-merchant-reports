@@ -8,7 +8,7 @@ import datetime
 
 
 
-def whitebit_excel(i, df_turnover, df_turnover_refund, statement_sheet, check_sheet, date_from, date_to):
+def Merchant2_excel(i, df_turnover, df_turnover_refund, statement_sheet, check_sheet, date_from, date_to):
   eu_rate_fee = 0.015
   noneu_rate_fee = 0.035
   hold_rate = 0.1
