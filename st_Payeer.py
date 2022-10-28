@@ -1,17 +1,17 @@
-# Класс потомок для Пеер
+
 import class_currency as basic
 
 
-class clPayeer(basic.Currency):
+class Merchant1(basic.Currency):
 
   def count_refund (self):
-    refund_count_df = self.df_turnover_refund[(self.df_turnover_refund['Валюта'].isin(self.curr_name)) & (~self.df_turnover_refund['Платежная система платежной карты'].isin(self.cup))]  # fore payeer & adv don't count CUP refund
-    refund_count_curr = refund_count_df['Стоимость операции'].count()  # кол-во рефандов by currency
+    refund_count_df = self.df_turnover_refund[(self.df_turnover_refund['***'].isin(self.curr_name)) & (~self.df_turnover_refund['***'].isin(self.cup))]  
+    refund_count_curr = refund_count_df['***'].count()  # кол-во рефандов by currency
     return refund_count_curr
 #  -----------------------------------------------------------------------------
 
-def payeer_excel(i, df_turnover, df_turnover_refund, statement_sheet, check_sheet, date_from, date_to):
-  x = clPayeer([i], df_turnover, df_turnover_refund)
+def Merchant1_excel(i, df_turnover, df_turnover_refund, statement_sheet, check_sheet, date_from, date_to):
+  x = Merchant1([i], df_turnover, df_turnover_refund)
   match i:
     case "USD":
       statement_sheet['C8'] = x.turnover_comp()
